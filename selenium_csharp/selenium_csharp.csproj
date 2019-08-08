@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+    <!-- Add the following line -->
+    <PublishChromeDriver>true</PublishChromeDriver>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="76.0.3809.68-beta" />
+    <PackageReference Include="SpecFlow" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Feature\SignUp.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SignUp.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Feature\SpecFlowFeature1.feature">
+      <Generator>SpecFlow.Tools.MsBuild.Generation</Generator>
+      <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Feature\SignUp.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignUp.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+</Project>
