@@ -42,6 +42,8 @@ namespace selenium_csharp.stepDefinitions
             Thread.Sleep(1000);
             SignUpPage signUpPage = new SignUpPage(driver);
             signUpPage.signUpUser(user);
+            //dfdsgfgfg
+            //dfsdgfdsgd
 
         }
 
