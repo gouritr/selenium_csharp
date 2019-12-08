@@ -13,15 +13,16 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="76.0.3809.68-beta" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="78.0.3904.7000" />
     <PackageReference Include="SpecFlow" Version="3.0.225" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Feature\Met_Compare_Humidity.feature.cs">
+      <DependentUpon>Met_Compare_Humidity.feature</DependentUpon>
+    </Compile>
     <Compile Update="Feature\SignUp.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
       <DependentUpon>SignUp.feature</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -38,6 +39,18 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SignUp.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Feature\Met_Compare_Humidity.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Met_Compare_Humidity.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Feature\Met_Compare_Humidity.feature" />
+    <Content Include="Feature\SignUp.feature" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Uitls\" />
+  </ItemGroup>
 </Project>
