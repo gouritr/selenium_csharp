@@ -22,9 +22,6 @@
     <Compile Update="Feature\Met_Compare_Humidity.feature.cs">
       <DependentUpon>Met_Compare_Humidity.feature</DependentUpon>
     </Compile>
-    <Compile Update="Feature\SignUp.feature.cs">
-      <DependentUpon>SignUp.feature</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -47,7 +44,6 @@
 
   <ItemGroup>
     <Content Include="Feature\Met_Compare_Humidity.feature" />
-    <Content Include="Feature\SignUp.feature" />
   </ItemGroup>
 
   <ItemGroup>
